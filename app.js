@@ -226,7 +226,7 @@ app.use('/admin', admin);
 
 
 //start the server
-app.listen(5000, function () {
+app.listen(process.env.PORT, function () {
   console.log('server started at port 5000');
 });
 
