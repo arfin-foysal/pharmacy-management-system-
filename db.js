@@ -15,7 +15,7 @@ module.exports = {
                 console.log('error connecting database ...');
             }
         });
-        if(param == null)
+        if(param == null )
         {
             connection.query(sql, function(err, result){
                 callback(result);
