@@ -1,0 +1,126 @@
+<body>
+    <!-- [ Pre-loader ] start -->
+    <div class="loader-bg">
+        <div class="loader-track">
+            <div class="loader-fill"></div>
+        </div>
+    </div>
+    <!-- [ Pre-loader ] End -->
+    <!-- [ navigation menu ] start -->
+    <nav class="pcoded-navbar">
+        <div class="navbar-wrapper">
+            <div class="navbar-brand header-logo">
+                <a href="/admin" class="b-brand">
+                    <div class="b-bg">
+                        <i class="feather icon-minus"></i>
+                    </div>
+                    <span class="b-title">PMS</span>
+                </a>
+                <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a>
+            </div>
+            <div class="navbar-content scroll-div">
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <% if(user.UserType == 'Admin'){ %>
+                    <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
+                        <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
+                    </li>
+                    <!-- <li class="nav-item pcoded-menu-caption">
+                        <label>UI Element</label>
+                    </li> -->
+                    <!-- <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
+                        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Components</span></a>
+                        <ul class="pcoded-submenu">
+                            <li class=""><a href="bc_button.html" class="">Button</a></li>
+                            <li class=""><a href="bc_badges.html" class="">Badges</a></li>
+                            <li class=""><a href="bc_breadcrumb-pagination.html" class="">Breadcrumb & paggination</a></li>
+                            <li class=""><a href="bc_collapse.html" class="">Collapse</a></li>
+                            <li class=""><a href="bc_tabs.html" class="">Tabs & pills</a></li>
+                            <li class=""><a href="bc_typography.html" class="">Typography</a></li>
+
+
+                            <li class=""><a href="icon-feather.html" class="">Feather<span class="pcoded-badge label label-danger">NEW</span></a></li>
+                        </ul>
+                    </li> -->
+
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>SALES</label>
+                    </li>
+
+
+                    <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
+                        <a href="/admin/sale" class="nav-link "><span class="pcoded-micon"><i class="feather icon-plus-circle"></i></span><span class="pcoded-mtext">New Sale</span></a>
+                    </li>
+
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/admin/saleshistory" class="nav-link "><span class="pcoded-micon"><i class="feather icon-activity"></i></span><span class="pcoded-mtext">Sales History</span></a>
+                    </li>
+                   
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>INVENTORY</label>
+                    </li>
+                   <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/admin/batch "class="nav-link "><span class="pcoded-micon"><i class="feather icon-award"></i></span><span class="pcoded-mtext">Batch</span></a>
+                    </li>
+                   <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/admin/medicine" class="nav-link "><span class="pcoded-micon"><i class="feather icon-slack"></i></span><span class="pcoded-mtext">Medicine</span></a>
+                    </li>
+                   <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/admin/supplier"class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Supplier</span></a>
+                    </li>
+                   <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/admin/category" class="nav-link "><span class="pcoded-micon"><i class="feather icon-align-justify"></i></span><span class="pcoded-mtext">Category</span></a>
+                    </li>
+                   <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a href="/admin/genericname" class="nav-link "><span class="pcoded-micon"><i class="feather icon-book"></i></span><span class="pcoded-mtext">Drug Generic Name</span></a>
+                    </li>
+                   <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a  href="/admin/manufacturer" class="nav-link "><span class="pcoded-micon"><i class="feather icon-copy"></i></span><span class="pcoded-mtext">Manufacturer</span></a>
+                    </li>
+
+
+                    <li data-username="Disabled Menu" class="nav-item disabled"><a href="javascript:" class="nav-link"><span class="pcoded-micon">
+                        <i class="feather icon-power"></i>
+                    </span>
+                    <span class="pcoded-mtext">Disabled menu</span></a></li>
+
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>User</label>
+                    </li>
+
+                    <li data-username="Table bootstrap datatable footable" class="nav-item">
+                        <a  href="/admin/usermanagement" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext"> User Management</span></a>
+                    </li>
+
+                    <% } else{ %> 
+                        <li class="nav-item pcoded-menu-caption">
+                            <label>Pages</label>
+                        </li>
+                        <li data-username="Sample Page" class="nav-item"><a href="/admin/sale" class="nav-link"><span class="pcoded-micon"><i class="feather icon-plus-circle"></i></span><span class="pcoded-mtext">New Sale</span></a>
+                        </li>
+                        <li data-username="Sample Page" class="nav-item"><a href="/admin/saleshistory" class="nav-link"><span class="pcoded-micon"><i class="feather  icon-activity"></i></span><span class="pcoded-mtext">Sales History</span></a>
+                        </li>
+                 <% } %>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- [ navigation menu ] end -->
+
+    <!-- [ Header ] start -->
+
+    <!-- [ Header ] end -->
+
+    <!-- [ Main Content ] start -->
+    <div class="pcoded-main-container">
+        <div class="pcoded-wrapper">
+            <div class="pcoded-content">
+                <div class="pcoded-inner-content">
+                    <!-- [ breadcrumb ] start -->
+
+
+
+                    
