@@ -3,10 +3,10 @@ var mysql = require('mysql');
 module.exports = {
     getData: function(sql, param, callback){
         var connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: '',
-            database: 'pharmacy'
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_NAME
         });
 
         connection.connect(function(err){
@@ -15,7 +15,7 @@ module.exports = {
                 console.log('error connecting database ...');
             }
         });
-        if(param == null )
+        if(param == null)
         {
             connection.query(sql, function(err, result){
                 callback(result);

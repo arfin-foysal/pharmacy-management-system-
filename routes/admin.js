@@ -32,10 +32,10 @@ router.use('*', function (req, res, next) {
 router.get('/', function (req, res) {
 
     var connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'pharmacy'
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME
     });
     
     var totalSell = "select ROUND(SUM(Total_Payable),2) AS sells_count from bill_information";
@@ -355,10 +355,10 @@ router.get('/batch/create', function (req, res) {
     check_staff(req, res);
 
     var connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'pharmacy'
+        host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
     });
 
     var medicineName = "SELECT * FROM Medicine_Information";
@@ -842,10 +842,10 @@ router.get('/medicine/create', function (req, res) {
     check_staff(req, res);
 
     var connection = mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'pharmacy'
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME
     });
 
     var generic = "SELECT * FROM drug_generic_name";
@@ -893,10 +893,10 @@ router.post('/medicine/create', function (req, res) {
         if (!result.isEmpty()) {
 
             var connection = mysql.createConnection({
-                host: 'localhost',
-                user: 'root',
-                password: '',
-                database: 'pharmacy'
+                host: process.env.DB_HOST,
+                user: process.env.DB_USER,
+                password: process.env.DB_PASSWORD,
+                database: process.env.DB_NAME
             });
 
             var generic = "SELECT * FROM drug_generic_name";
@@ -1017,10 +1017,10 @@ router.post('/medicine/edit/:id', function (req, res) {
         if (!result.isEmpty()) {
 
             var connection = mysql.createConnection({
-                host: 'localhost',
-                user: 'root',
-                password: '',
-                database: 'pharmacy'
+                host: process.env.DB_HOST,
+                user: process.env.DB_USER,
+                password: process.env.DB_PASSWORD,
+                database: process.env.DB_NAME
             });
 
             var id = req.params.id;
