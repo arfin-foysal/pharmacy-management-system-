@@ -156,7 +156,7 @@ router.get('/sale', function (req, res) {
 
 router.post('/sale', function (req, res) {
     var billInfo = {
-        Invoice_No: req.body.invoice_number,
+        Invoice_No: Math.random().toString(36).substr(2, 9),
         Total_Amount: req.body.totalAmount,
         Discount: req.body.discount,
         Discount_Amount: req.body.discountAmount,
